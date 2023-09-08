@@ -2031,6 +2031,26 @@ $(".tablas").on("click", ".btnImprimirInformeCb", function(){
 
 
 /*=============================================
+IMPRIMIR INFORME CICLO BASICO CON MAIL
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirInformeCbMail", function(){
+
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var informe = $(this).attr("informe");
+	var periodo = $(this).attr("periodo");
+
+
+
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&periodo="+periodo, "_blank");
+
+})
+
+
+/*=============================================
 IMPRIMIR INFORME CICLO ORIENTADO 3ER. AÑO
 =============================================*/
 

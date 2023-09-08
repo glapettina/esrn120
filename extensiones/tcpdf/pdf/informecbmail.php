@@ -68,6 +68,7 @@ class imprimirReporte{
 
 		$nombre = $respuestaInforme["nombre"];
 		$idCurso = $respuestaInforme["id_curso"];
+		$direccion = $respuestaInforme["email"];
 		
 
 		// TRAEMOS LA INFORMACION DE LOS CURSOS
@@ -910,14 +911,14 @@ $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 //SALIDA DEL ARCHIVO
 
-//$output = $pdf->output();
-//$namepdf = 'informe_'.$nombre.'.pdf';
-//$path = '../../../informes/'.$namepdf;
-//file_put_contents($path, $output);
+$output = $pdf->output();
+$namepdf = 'informe_'.$nombre.'.pdf';
+$path = '../../../informes/'.$namepdf;
+file_put_contents($path, $output);
 
 
 
-$pdf->Output('informe_'.$nombre.'.pdf');
+//$pdf->Output('informe_'.$nombre.'.pdf');
 
 }
 }
@@ -927,6 +928,10 @@ $reporte -> id = $_GET["id"];
 $reporte -> informe = $_GET["informe"];
 //$reporte -> area = $_GET["area"];
 $reporte -> traerImpresionReporte();
+
+
+$enviarmail = new ControladorInformes();
+$enviarmail -> ctrEnvioMail($path, $direccion);
 
 
 ?>	
