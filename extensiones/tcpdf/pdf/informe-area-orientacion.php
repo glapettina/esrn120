@@ -685,7 +685,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 
