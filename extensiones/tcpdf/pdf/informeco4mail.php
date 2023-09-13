@@ -12,11 +12,7 @@ class imprimirReporte{
 
 	public $id;
 
-
 	public function traerImpresionReporte(){
-
-
-		
 
 		// TRAEMOS LA INFORMACION DE LOS INFORMES
 
@@ -45,6 +41,20 @@ class imprimirReporte{
 			$tablaInforme = "quinto";
 		}
 
+
+		if ($_GET["modalidad"] == "Economía y Administración") {
+			
+			$modalidad = "Economía y Administración";
+		}
+
+		if ($_GET["modalidad"] == "Educación Física") {
+			
+			$modalidad = "Educación Física";
+		}
+
+
+
+
 		$itemInforme = "id";
 		$valorInforme = $this->id;
 		$periodo = $_GET["periodo"];
@@ -68,8 +78,8 @@ class imprimirReporte{
 
 		$nombre = $respuestaInforme["nombre"];
 		$idCurso = $respuestaInforme["id_curso"];
-		$direccion = $respuestaInforme["email"];
 		
+
 
 		// TRAEMOS LA INFORMACION DE LOS CURSOS
 
@@ -86,10 +96,9 @@ class imprimirReporte{
 
 require_once('tcpdf_include.php');
 
+//$pdf=new FPDF(‘L’,’cm’,’A4’);
 
 $pdf = new TCPDF('L', PDF_UNIT, 'A4', true, 'UTF-8', false);
- 
-
 
 $pdf->setPrintHeader(false); //Ahora si imprimirá cabecera
 $pdf->setPrintFooter(true); //Ahora si imprimirá pie de página
@@ -104,9 +113,6 @@ $pdf->SetMargins(PDF_MARGIN_LEFT, 10, PDF_MARGIN_RIGHT);
 $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
-// set auto page breaks
-//$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
 $pdf->startPageGroup();
 
 $pdf->AddPage();
@@ -118,14 +124,29 @@ $bloque1 = <<<EOF
 
 	<table>
 
+		<table>
+
 		<tr>
 
 			<td style="width: 780px"><img src="images/header.png"></td>
 
-			
+			<td style="background-color:white; width:606px">
+
+				<div style="font-size:14px; text-align: right; line-height:10px;">
+
+					<br>	
+					ESCUELA SECUNDARIA RIO NEGRO Nº 153					
+
+				</div>
+
+			</td>
+
 			
 			
 		</tr>
+		
+
+	</table>
 		
 
 	</table>
@@ -191,7 +212,7 @@ $bloque3 = <<<EOF
 
 			</td>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:260px">
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:185px">
 
 				<br>
 
@@ -200,7 +221,7 @@ $bloque3 = <<<EOF
 
 			</td>		
 
-			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:260px">
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:185px">
 
 				<br>
 
@@ -208,6 +229,15 @@ $bloque3 = <<<EOF
 
 
 			</td>			
+
+			<td style="text-align: center; border: 1px solid #666; background-color:#C2BDBC;; width:150px">
+
+				<br>
+
+				Modalidad
+
+
+			</td>		
 
 		</tr>
 
@@ -242,7 +272,7 @@ $bloque4 = <<<EOF
 
 
 
-			<td style="text-align: center; border: 1px solid #666; background-color:white; width:260px">
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:185px">
 
 				<br>
 
@@ -251,11 +281,20 @@ $bloque4 = <<<EOF
 
 			</td>
 
-			<td style="text-align: center; border: 1px solid #666; background-color:white; width:260px">
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:185px">
 
 				<br>
 
 				$turno
+
+
+			</td>
+
+			<td style="text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$modalidad
 
 
 			</td>
@@ -837,7 +876,10 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+
+if ($modalidad == "Economía y Administración") {
+
+	//----------------------------------------------------------------------------------
 
 
 $bloque13 = <<<EOF
@@ -854,7 +896,217 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				ESPACIO E.V.E.
+				C.O. - ECONOMÍA SOCIAL Y SOLIDARIA
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_economia]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_economia]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_economia]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_economia]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque13, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque14 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - PRINCIPIO DE ECONOMÍA Y ADMINISTRACIÓN
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_principio4]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_principio4]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_principio4]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_principio4]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque14, false, false, false, false, '');
+
+//----------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque15 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - GESTIÓN DE PYMES Y COOPERATIVAS
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_pymes4]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_pymes4]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_pymes4]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_pymes4]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque15, false, false, false, false, '');
+
+//----------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque16 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				ESPACIO E.V.E. 
 
 
 			</td>
@@ -903,9 +1155,301 @@ $bloque13 = <<<EOF
 EOF;
 
 
+$pdf->writeHTML($bloque16, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+
+
+
+	
+}else{
+
+	//----------------------------------------------------------------------------------
+
+
+$bloque13 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - EDUCACIÓN FISICA Y CULTURAS CORPORALES
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_culturas]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_culturas]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_culturas]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_culturas]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
 $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 //--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque14 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - PRÁCTICAS LUDOMOTRICES Y DEPORTIVAS 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_deportivas]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_deportivas]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_deportivas]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_deportivas]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque14, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque15 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - PRÁCTICAS CORPORALES Y EXPRESIVAS 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_corporales]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_corporales]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_corporales]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_corporales]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque15, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------
+
+
+$bloque16 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				ESPACIO E.V.E. 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_eve]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_eve]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_eve]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_eve]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque16, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+
+
+
+}
 
 
 
@@ -916,9 +1460,8 @@ $namepdf = 'informe_'.$nombre.'.pdf';
 $path = '../../../informes/'.$namepdf;
 file_put_contents($path, $output);
 
-
-
 //$pdf->Output('informe_'.$nombre.'.pdf');
+
 
 }
 }
@@ -928,10 +1471,6 @@ $reporte -> id = $_GET["id"];
 $reporte -> informe = $_GET["informe"];
 //$reporte -> area = $_GET["area"];
 $reporte -> traerImpresionReporte();
-
-
-//$enviarmail = new ControladorInformes();
-//$enviarmail -> ctrEnvioMail($path, $direccion);
 
 
 ?>	

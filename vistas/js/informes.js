@@ -2070,6 +2070,26 @@ $(".tablas").on("click", ".btnImprimirInformeCo3", function(){
 
 })
 
+/*=============================================
+IMPRIMIR INFORME CICLO ORIENTADO 3ER. AÑO CON MAIL
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirInformeCo3Mail", function(){
+
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var informe = $(this).attr("informe");
+	var modalidad = $(this).attr("modalidad");
+	var periodo = $(this).attr("periodo");
+
+
+
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
+
+})
+
 
 /*=============================================
 IMPRIMIR INFORME CICLO ORIENTADO 4TO. AÑO
@@ -2091,12 +2111,52 @@ $(".tablas").on("click", ".btnImprimirInformeCo4", function(){
 
 })
 
+/*=============================================
+IMPRIMIR INFORME CICLO ORIENTADO 4TO. AÑO CON MAIL
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirInformeCo4Mail", function(){
+
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var informe = $(this).attr("informe");
+	var modalidad = $(this).attr("modalidad");
+	var periodo = $(this).attr("periodo");
+
+
+
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
+
+})
+
 
 /*=============================================
 IMPRIMIR INFORME CICLO ORIENTADO 5TO. AÑO
 =============================================*/
 
 $(".tablas").on("click", ".btnImprimirInformeCo5", function(){
+
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var informe = $(this).attr("informe");
+	var modalidad = $(this).attr("modalidad");
+	var periodo = $(this).attr("periodo");
+
+
+
+	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&modalidad="+modalidad+"&periodo="+periodo, "_blank");
+
+})
+
+/*=============================================
+IMPRIMIR INFORME CICLO ORIENTADO 5TO. AÑO CON MAIL
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirInformeCo5Mail", function(){
 
 
 

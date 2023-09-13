@@ -132,7 +132,8 @@
                             }
 
 
-                               echo'<button class="btn btn-primary btnImprimirInformeCo4" periodo="'.$_SESSION['periodo'].'" informe="informeco4" tabla="cuarto" modalidad="'.$value["modalidad"].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeCb"><i class="fa fa-print"></i></button>';
+                               echo'<button class="btn btn-primary btnImprimirInformeCo4" periodo="'.$_SESSION['periodo'].'" informe="informeco4" tabla="cuarto" modalidad="'.$value["modalidad"].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeCb"><i class="fa fa-print"></i></button>
+                               <button class="btn btn-success btnImprimirInformeCo4Mail" periodo="'.$_SESSION['periodo'].'" informe="informeco4mail" tabla="cuarto" modalidad="'.$value["modalidad"].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeCb"><i class="fa fa-envelope-o"></i></button>';
 
                             echo '</div>
 
