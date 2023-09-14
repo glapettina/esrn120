@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        1º Segunda TT - Area Lenguajes Artísticos
+        1º Tercera TT - Area Lenguajes Artísticos
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">1º Segunda TT - Area Lenguajes Artísticos</li>
+        <li class="active">1º Tercera TT - Area Lenguajes Artísticos</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=18 tabla="primero" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=21 tabla="primero" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=18 tabla="primero" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=21 tabla="primero" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 18;
+                  $valor = 21;
                   $tabla = "primero";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
@@ -271,7 +271,7 @@
          <?php
 
               $tabla = "primero";
-              $curso = "12tt-artistica";
+              $curso = "13tt-artistica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeArtistica($tabla, $curso);
@@ -355,8 +355,8 @@
          <?php
 
               $tabla = "primero";
-              $curso = "12tt-artistica";
-              $ncurso = 18;
+              $curso = "13tt-artistica";
+              $ncurso = 21;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
