@@ -650,12 +650,12 @@
 		COPIAR SABERES MOTRICIDAD (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesMotricidad($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesMotricidad($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesMotricidad"])) {
 							
 
-				$datos = array("saberes_motricidad" => $_POST["copiaSaberesMotricidad"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_motricidad" => $_POST["copiaSaberesMotricidad"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4,);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesMotricidad($tabla, $datos, $periodo);
@@ -690,12 +690,12 @@
 		COPIAR SABERES CULTURAS (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesCulturas($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesCulturas($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesCulturas"])) {
 							
 
-				$datos = array("saberes_culturas" => $_POST["copiaSaberesCulturas"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_culturas" => $_POST["copiaSaberesCulturas"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesCulturas($tabla, $datos, $periodo);
@@ -730,12 +730,12 @@
 		COPIAR SABERES DEPORTIVAS (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesDeportivas($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesDeportivas($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesDeportivas"])) {
 							
 
-				$datos = array("saberes_deportivas" => $_POST["copiaSaberesDeportivas"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_deportivas" => $_POST["copiaSaberesDeportivas"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesDeportivas($tabla, $datos, $periodo);
@@ -770,12 +770,12 @@
 		COPIAR SABERES CORPORALES (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesCorporales($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesCorporales($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesCorporales"])) {
 							
 
-				$datos = array("saberes_corporales" => $_POST["copiaSaberesCorporales"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_corporales" => $_POST["copiaSaberesCorporales"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesCorporales($tabla, $datos, $periodo);
@@ -810,12 +810,12 @@
 		COPIAR SABERES INTERVENCION (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesIntervencion($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesIntervencion($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesIntervencion"])) {
 							
 
-				$datos = array("saberes_intervencion" => $_POST["copiaSaberesIntervencion"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_intervencion" => $_POST["copiaSaberesIntervencion"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesIntervencion($tabla, $datos, $periodo);
@@ -850,12 +850,12 @@
 		COPIAR SABERES AMBIENTE (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesAmbiente($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesAmbiente($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesAmbiente"])) {
 							
 
-				$datos = array("saberes_ambiente" => $_POST["copiaSaberesAmbiente"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_ambiente" => $_POST["copiaSaberesAmbiente"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesAmbiente($tabla, $datos, $periodo);
@@ -890,12 +890,12 @@
 		COPIAR SABERES NATACION (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesNatacion($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesNatacion($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesNatacion"])) {
 							
 
-				$datos = array("saberes_natacion" => $_POST["copiaSaberesNatacion"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_natacion" => $_POST["copiaSaberesNatacion"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesNatacion($tabla, $datos, $periodo);
@@ -929,12 +929,12 @@
 		COPIAR SABERES PROYECTOS (EDUCACION FISICA)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesProyectos($tabla, $curso, $ncurso1, $ncurso2, $periodo){
+		static public function ctrCopiarSaberesProyectos($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo){
 
 			if (isset($_POST["copiaSaberesProyectos"])) {
 							
 
-				$datos = array("saberes_proyectos" => $_POST["copiaSaberesProyectos"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2);
+				$datos = array("saberes_proyectos" => $_POST["copiaSaberesProyectos"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
 				$respuesta = ModeloInformes::mdlCopiarSaberesProyectos($tabla, $datos, $periodo);

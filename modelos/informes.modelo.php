@@ -517,11 +517,13 @@
 		static public function mdlCopiarSaberesMotricidad($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_motricidad = :saberes_motricidad WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_motricidad = :saberes_motricidad WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_motricidad", $datos["saberes_motricidad"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -546,11 +548,13 @@
 		static public function mdlCopiarSaberesCulturas($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_culturas = :saberes_culturas WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_culturas = :saberes_culturas WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_culturas", $datos["saberes_culturas"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -575,11 +579,13 @@
 		static public function mdlCopiarSaberesDeportivas($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_deportivas = :saberes_deportivas WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_deportivas = :saberes_deportivas WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_deportivas", $datos["saberes_deportivas"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -604,11 +610,13 @@
 		static public function mdlCopiarSaberesCorporales($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_corporales = :saberes_corporales WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_corporales = :saberes_corporales WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_corporales", $datos["saberes_corporales"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -633,11 +641,13 @@
 		static public function mdlCopiarSaberesIntervencion($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_intervencion = :saberes_intervencion WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_intervencion = :saberes_intervencion WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_intervencion", $datos["saberes_intervencion"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -662,11 +672,13 @@
 		static public function mdlCopiarSaberesAmbiente($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_ambiente = :saberes_ambiente WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_ambiente = :saberes_ambiente WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_ambiente", $datos["saberes_ambiente"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -691,11 +703,13 @@
 		static public function mdlCopiarSaberesNatacion($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_natacion = :saberes_natacion WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_natacion = :saberes_natacion WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_natacion", $datos["saberes_natacion"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
@@ -719,11 +733,13 @@
 		static public function mdlCopiarSaberesProyectos($tabla, $datos, $periodo){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_proyectos = :saberes_proyectos WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_proyectos = :saberes_proyectos WHERE periodo = '$periodo' AND id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
 			$stmt->bindParam(":saberes_proyectos", $datos["saberes_proyectos"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
 
 
 			if ($stmt->execute()) {
