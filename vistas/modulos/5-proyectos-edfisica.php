@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=16 idCurso2=17 tabla="quinto" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=11 idCurso2=12 idCurso3=16 idCurso4=17 tabla="quinto" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="proyectos" periodo="'.$_SESSION['periodo'].'" idCurso=16 idCurso2=17 idCurso3=0 idCurso4=0 modalidad="Educación Física" tabla="quinto" informe="informe-area-orientacion">
+                <button class="btn btn-primary btnInformeArea" area="proyectos" periodo="'.$_SESSION['periodo'].'" idCurso=11 idCurso2=12 idCurso3=16 idCurso4=17 modalidad="Educación Física" tabla="quinto" informe="informe-area-orientacion">
                   
                   Informes Curso
                 </button>
@@ -76,10 +76,10 @@
               <?php
 
                   $item = "id_curso";
-                  $valor1 = 16;
-                  $valor2 = 17;
-                  $valor3 = 0;
-                  $valor4 = 0;
+                  $valor1 = 11;
+                  $valor2 = 12;
+                  $valor3 = 16;
+                  $valor4 = 17;
                   $tabla = "quinto";
                   $periodo = $_SESSION["periodo"];
                   $modalidad = "Educación Física";
@@ -355,13 +355,14 @@
 
               $tabla = "quinto";
               $curso = "5-proyectos-edfisica";
-              $ncurso1 = 16;
-              $ncurso2 = 17;
-              //$ncurso3 = 13;
+              $ncurso1 = 11;
+              $ncurso2 = 12;
+              $ncurso3 = 16;
+              $ncurso4 = 17;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
-              $copiaSaberes -> ctrCopiarSaberesProyectos($tabla, $curso, $ncurso1, $ncurso2, $periodo);
+              $copiaSaberes -> ctrCopiarSaberesProyectos($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo);
 
           ?>
 

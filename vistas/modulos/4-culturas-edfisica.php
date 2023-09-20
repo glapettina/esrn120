@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=14 idCurso2=15 tabla="cuarto" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=9 idCurso2=10 idCurso3=14 idCurso4=15 tabla="cuarto" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="culturas" periodo="'.$_SESSION['periodo'].'" idCurso=14 idCurso2=15 idCurso3=0 idCurso4=0 modalidad="Educación Física" tabla="cuarto" informe="informe-area-orientacion">
+                <button class="btn btn-primary btnInformeArea" area="culturas" periodo="'.$_SESSION['periodo'].'" idCurso=9 idCurso2=10 idCurso3=14 idCurso4=15 modalidad="Educación Física" tabla="cuarto" informe="informe-area-orientacion">
                   
                   Informes Curso
                 </button>
@@ -76,10 +76,10 @@
               <?php
 
                   $item = "id_curso";
-                  $valor1 = 14;
-                  $valor2 = 15;
-                  $valor3 = 0;
-                  $valor4 = 0;
+                  $valor1 = 9;
+                  $valor2 = 10;
+                  $valor3 = 14;
+                  $valor4 = 15;
                   $tabla = "cuarto";
                   $periodo = $_SESSION["periodo"];
                   $modalidad = "Educación Física";
@@ -355,13 +355,14 @@
 
               $tabla = "cuarto";
               $curso = "4-culturas-edfisica";
-              $ncurso1 = 14;
-              $ncurso2 = 15;
-              //$ncurso3 = 13;
+              $ncurso1 = 9;
+              $ncurso2 = 10;
+              $ncurso3 = 14;
+              $ncurso4 = 15;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
-              $copiaSaberes -> ctrCopiarSaberesCulturas($tabla, $curso, $ncurso1, $ncurso2, $periodo);
+              $copiaSaberes -> ctrCopiarSaberesCulturas($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4, $periodo);
 
           ?>
 
