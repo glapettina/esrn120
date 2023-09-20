@@ -1249,7 +1249,7 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				C.O. - ESPACIO DE OPCIÓN INSTITUCIONAL: NATACIÓN
+				C.O. - ESPACIO DE OPCIÓN INSTITUCIONAL
 
 
 			</td>
