@@ -1,6 +1,192 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 	class ControladorInformes{
+
+
+	/*=============================================
+					ENVÍO MAILS
+	=============================================*/
+
+	public function ctrEnvioMail($path, $direccion){
+
+		if(isset($direccion)){
+
+			if( preg_match('/^[0-9-a-zA-Z ]+$/', $direccion) 
+
+			 ){
+				
+	/*=============================================
+			VERIFICACIÓN CORREO ELECTRÓNICO
+	=============================================*/
+
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+
+	date_default_timezone_set("America/Argentina/Buenos_Aires");
+
+	$ruta = ControladorRuta::ctrRuta();
+
+	$mail->CharSet = 'UTF-8';
+
+
+	$mail = new PHPMailer(true);
+
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = '120.esrn.com.ar';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'informes@120.esrn.com.ar';                     //SMTP username
+    $mail->Password   = 'tP$Wq3Y%';                               //SMTP password
+    $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    //Recipients
+    //$mail->setFrom('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
+    //$mail->addAddress('glapettina@gmail.com', 'Joe User');     //Add a recipient
+    //$mail->addAddress('ellen@example.com');               //Name is optional
+    //$mail->addReplyTo('info@example.com', 'Information');
+    //$mail->addCC('cc@example.com');
+    //$mail->addBCC('bcc@example.com');
+
+    //Attachments
+    //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+    //Content
+    //$mail->isHTML(true);                                  //Set email format to HTML
+    //$mail->Subject = 'Here is the subject';
+    //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    //$mail->send();
+
+
+	$mail->isMail();				
+
+	$mail->setFrom('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
+
+	//$mail->addReplyTo('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
+
+	$mail->Subject = "Informe Cualitativo Segundo Cuatrimestre 2023";
+
+	$mail->addAddress($direccion);
+
+	$mail->msgHTML('<div style="width:100%; background:#eee; position:relative; font-family:sans-serif; padding-bottom:40px">
+
+			<center>
+
+				<img style="padding:20px; width:10%" src="https://120.esrn.com.ar/vistas/img/plantilla/escudo.png">
+
+			</center>
+
+			<div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
+
+				<center>
+					
+					<img style="padding:20px; width:15%" src="https://120.esrn.com.ar/vistas/img/plantilla/icon-email.png">
+
+					<h3 style="font-weight:100; color:#999;">HA RECIBIDO UN INFORME</h3>
+
+					<hr style="width:80%; border:1px solid #ccc">
+
+					<h4 style="font-weight:100; color:#999; padding:0px 20px; text-transform:uppercase">ESRN Nº - CIPOLLETTI</h4>
+
+					<hr style="width:80%; border:1px solid #ccc">
+
+				</center>
+
+			</div>
+			
+		</div>
+	');				
+
+
+	$envio = $mail->Send();
+//     echo 'Message has been sent';
+// } catch (Exception $e) {
+//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+// }
+
+				
+				if(!$envio){
+
+					echo'<script>
+
+						swal({
+								type:"error",
+							  	title: "¡ERROR!",
+							  	text: "¡Ha ocurrido un problema enviando el mensaje, vuelva a intentarlo!",
+							  	showConfirmButton: true,
+								confirmButtonText: "Cerrar"
+							  
+						}).then(function(result){
+
+								if(result.value){   
+								    history.back();
+								  } 
+						});
+
+					</script>';
+
+				}else{
+
+
+					echo'<script>
+
+							swal({
+								 	type: "success",
+							  		title: "¡OK!",
+							  		text: "¡Su mensaje ha sido enviado, muy pronto le responderemos!",					 
+									showConfirmButton: true,
+									confirmButtonText: "Cerrar"
+								
+								}).then(function(result){
+
+									if(result.value){
+										history.back();
+									}
+							});
+
+					</script>';
+
+				}	
+
+
+			}else{
+
+
+				echo '<script>
+
+					swal({
+					 		type:"error",
+							title: "¡ERROR!",
+						  	text: "¡Problemas al enviar el mensaje, revise que no tenga caracteres especiales!",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar"
+						
+						}).then(function(result){
+
+							if(result.value){
+								history.back();
+							}
+					});
+
+				</script>';
+
+			}
+
+		}
+
+	}
+
 
 
 		/*=============================================

@@ -86,6 +86,7 @@ class imprimirReporte{
 
 require_once('tcpdf_include.php');
 
+ob_start();
 
 $pdf = new TCPDF('L', PDF_UNIT, 'A4', true, 'UTF-8', false);
  
@@ -909,16 +910,41 @@ $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 
 
+
 //SALIDA DEL ARCHIVO
 
-$output = $pdf->output();
-$namepdf = 'informe_'.$nombre.'.pdf';
-$path = '../../../informes/'.$namepdf;
-file_put_contents($path, $output);
+
+/* $filename= 'informe_'.$nombre.'.pdf';
+$filelocation = "../../../informes";//windows
+//$filelocation = "/var/www/project/custom"; //Linux
+
+$fileNL = $filelocation."/".$filename;//Windows
+//$fileNL = $filelocation."/".$filename; //Linux
+
+ob_clean();
+
+
+$pdf->Output('F', $fileNL); */
 
 
 
-//$pdf->Output('informe_'.$nombre.'.pdf');
+//$output = $pdf->output();
+//$namepdf = 'informe_'.$nombre.'.pdf';
+//$path = '../../../informes/'.$namepdf;
+//file_put_contents($path, $output);
+$path = '../../../informes/';
+
+
+//$pdf->Output('I', '../../../informe_'.$nombre.'.pdf');
+
+$pdf->Output($path.'informe_'.$nombre.'.pdf', 'F');
+
+
+
+
+//$enviarmail = new ControladorInformes();
+//$enviarmail -> ctrEnvioMail($path, $direccion);
+
 
 }
 }
@@ -932,6 +958,8 @@ $reporte -> traerImpresionReporte();
 
 //$enviarmail = new ControladorInformes();
 //$enviarmail -> ctrEnvioMail($path, $direccion);
+
+
 
 
 ?>	
