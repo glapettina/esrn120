@@ -68,7 +68,6 @@ class imprimirReporte{
 
 		$nombre = $respuestaInforme["nombre"];
 		$idCurso = $respuestaInforme["id_curso"];
-		$direccion = $respuestaInforme["email"];
 		
 
 		// TRAEMOS LA INFORMACION DE LOS CURSOS
@@ -86,7 +85,6 @@ class imprimirReporte{
 
 require_once('tcpdf_include.php');
 
-ob_start();
 
 $pdf = new TCPDF('L', PDF_UNIT, 'A4', true, 'UTF-8', false);
  
@@ -910,41 +908,19 @@ $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 
 
-
 //SALIDA DEL ARCHIVO
 
-
-/* $filename= 'informe_'.$nombre.'.pdf';
-$filelocation = "../../../informes";//windows
-//$filelocation = "/var/www/project/custom"; //Linux
-
-$fileNL = $filelocation."/".$filename;//Windows
-//$fileNL = $filelocation."/".$filename; //Linux
-
-ob_clean();
-
-
-$pdf->Output('F', $fileNL); */
-
-
-
 //$output = $pdf->output();
-//$namepdf = 'informe_'.$nombre.'.pdf';
-//$path = '../../../informes/'.$namepdf;
-//file_put_contents($path, $output);
-$path = '../../../informes/';
+$namepdf = 'informe_'.$nombre.'.pdf';
+$path = 'informes/'.$namepdf;
+$ruta = '../../../informes/';
+file_put_contents($ruta, $namepdf);
 
-
-//$pdf->Output('I', '../../../informe_'.$nombre.'.pdf');
-
-$pdf->Output($path.'informe_'.$nombre.'.pdf', 'F');
+$pdf->Output($ruta.'informe_'.$nombre.'.pdf', 'FI');
 
 
 
-
-//$enviarmail = new ControladorInformes();
-//$enviarmail -> ctrEnvioMail($path, $direccion);
-
+//$pdf->Output('informe_'.$nombre.'.pdf');
 
 }
 }
@@ -954,12 +930,6 @@ $reporte -> id = $_GET["id"];
 $reporte -> informe = $_GET["informe"];
 //$reporte -> area = $_GET["area"];
 $reporte -> traerImpresionReporte();
-
-
-//$enviarmail = new ControladorInformes();
-//$enviarmail -> ctrEnvioMail($path, $direccion);
-
-
 
 
 ?>	

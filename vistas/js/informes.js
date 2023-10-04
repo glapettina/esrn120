@@ -2043,8 +2043,6 @@ $(".tablas").on("click", ".btnImprimirInformeCbMail", function(){
 	var informe = $(this).attr("informe");
 	var periodo = $(this).attr("periodo");
 
-
-
 	window.open("extensiones/tcpdf/pdf/"+informe+".php?id="+idAlumno+"&tabla="+tabla+"&informe="+informe+"&periodo="+periodo, "_blank");
 
 })

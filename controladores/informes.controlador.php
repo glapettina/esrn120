@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 					ENVÍO MAILS
 	=============================================*/
 
-	public function ctrEnvioMail($path, $direccion){
+	public function ctrEnvioMail($direccion){
 
 		if(isset($direccion)){
 
@@ -25,32 +25,33 @@ use PHPMailer\PHPMailer\Exception;
 
 
 //Load Composer's autoloader
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
 
 	date_default_timezone_set("America/Argentina/Buenos_Aires");
 
-	$ruta = ControladorRuta::ctrRuta();
+	//$ruta = ControladorRuta::ctrRuta();
 
 	$mail->CharSet = 'UTF-8';
 
 
 	$mail = new PHPMailer(true);
 
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = '120.esrn.com.ar';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'informes@120.esrn.com.ar';                     //SMTP username
-    $mail->Password   = 'tP$Wq3Y%';                               //SMTP password
-    $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+	    //Server settings
+		$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+		$mail->isSMTP();                                            //Send using SMTP
+		$mail->Host       = 'mail.jemchoele.com.ar';                     //Set the SMTP server to send through
+		$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+		$mail->Username   = 'info@jemchoele.com.ar';                     //SMTP username
+		$mail->Password   = 'V7&2rX6FTPbm';                               //SMTP password
+		$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+		$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+	
 
-    //Recipients
-    //$mail->setFrom('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
-    //$mail->addAddress('glapettina@gmail.com', 'Joe User');     //Add a recipient
+	//Recipients
+    $mail->setFrom('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
+    $mail->addAddress('glapettina@gmail.com', 'Joe User');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
@@ -71,13 +72,13 @@ require 'vendor/autoload.php';
 
 	$mail->isMail();				
 
-	$mail->setFrom('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
+	//$mail->setFrom('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
 
 	//$mail->addReplyTo('informes@120.esrn.com.ar', 'Informes ESRN Nº 120');
 
 	$mail->Subject = "Informe Cualitativo Segundo Cuatrimestre 2023";
 
-	$mail->addAddress($direccion);
+	//$mail->addAddress($direccion);
 
 	$mail->msgHTML('<div style="width:100%; background:#eee; position:relative; font-family:sans-serif; padding-bottom:40px">
 
@@ -97,7 +98,7 @@ require 'vendor/autoload.php';
 
 					<hr style="width:80%; border:1px solid #ccc">
 
-					<h4 style="font-weight:100; color:#999; padding:0px 20px; text-transform:uppercase">ESRN Nº - CIPOLLETTI</h4>
+					<h4 style="font-weight:100; color:#999; padding:0px 20px; text-transform:uppercase">ESRN Nº 120- CIPOLLETTI</h4>
 
 					<hr style="width:80%; border:1px solid #ccc">
 
