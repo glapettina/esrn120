@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=18 tabla="segundo" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=22 tabla="segundo" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=18 tabla="segundo" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=22 tabla="segundo" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 18;
+                  $valor = 22;
                   $tabla = "segundo";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
@@ -347,7 +347,7 @@
 
               $tabla = "segundo";
               $curso = "23tt-artistica";
-              $ncurso = 18;
+              $ncurso = 22;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();

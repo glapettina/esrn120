@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        2º Tercera TT - Area Sociales y Humanidades
+        3º Segunda TT - Area Segundas Lenguas
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">2º Tercera TT - Area Sociales y Humanidades</li>
+        <li class="active">3º Segunda TT - Area Segundas Lenguas</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=22 tabla="segundo" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=20 tabla="tercero" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
-                  Copia Saberes 
+                  Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="sociales" periodo="'.$_SESSION['periodo'].'" idCurso=22 tabla="segundo" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="ingles" periodo="'.$_SESSION['periodo'].'" idCurso=20 tabla="tercero" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 22;
-                  $tabla = "segundo";
+                  $valor = 20;
+                  $tabla = "tercero";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeSociales" nombreAlumno="'.$value["nombre"].'" tabla="segundo" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeIngles" nombreAlumno="'.$value["nombre"].'" tabla="tercero" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="segundo" area="sociales" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" periodo="'.$_SESSION['periodo'].'" informe="informe-individual" tabla="tercero" area="ingles" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -189,8 +189,8 @@
               
               <div class="form-group">
                 
-                  <label for="saberesSociales">Saberes</label>
-                      <textarea class="form-control" cols="80" rows="6" id="saberesSociales" name="saberesSociales">
+                  <label for="saberesIngles">Saberes</label>
+                      <textarea class="form-control" cols="80" rows="6" id="saberesIngles" name="saberesIngles">
                   </textarea>
               </div>
 
@@ -203,7 +203,7 @@
                   
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
                   
-                  <select class="form-control input-lg" id="apreciaSociales" name="apreciaSociales">
+                  <select class="form-control input-lg" id="apreciaIngles" name="apreciaIngles">
 
                   <option value="">Apreciación Cualitativa</option>
                   <option value="Se Apropió de los Saberes">Se Apropió de los Saberes</option>
@@ -225,7 +225,7 @@
                 <div class="input-group">
                   
                   <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                  <input class="form-control input-lg" type="number" name="asistenciaSociales" id="asistenciaSociales" placeholder="Ingresar asistencia (%)" required>
+                  <input class="form-control input-lg" type="number" name="asistenciaIngles" id="asistenciaIngles" placeholder="Ingresar asistencia (%)" required>
 
                 </div>
 
@@ -233,8 +233,8 @@
 
 
               <div class="form-group">          
-                  <label for="observaSociales">Observaciones</label>
-                      <textarea class="form-control" cols="80" rows="3" id="observaSociales" name="observaSociales">
+                  <label for="observaIngles">Observaciones</label>
+                      <textarea class="form-control" cols="80" rows="3" id="observaIngles" name="observaIngles">
                   </textarea>
               </div>
 
@@ -253,8 +253,6 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-
-
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
               <input type="hidden" name="idAlumno" id="idAlumno"> 
@@ -263,11 +261,11 @@
 
          <?php
 
-              $tabla = "segundo";
-              $curso = "23tt-sociales";
+              $tabla = "tercero";
+              $curso = "32tt-ingles";
 
               $editarInforme = new ControladorInformes();
-              $editarInforme -> ctrEditarInformeSociales($tabla, $curso);
+              $editarInforme -> ctrEditarInformeIngles($tabla, $curso);
 
           ?>
 
@@ -318,8 +316,8 @@
               
               <div class="form-group">
                 
-                  <label for="copiaSaberesSociales">Saberes</label>
-                      <textarea class="form-control" cols="80" rows="6" id="copiaSaberesSociales" name="copiaSaberesSociales">
+                  <label for="copiaSaberesIngles">Saberes</label>
+                      <textarea class="form-control" cols="80" rows="6" id="copiaSaberesIngles" name="copiaSaberesIngles">
                   </textarea>
               </div>
 
@@ -347,13 +345,13 @@
 
          <?php
 
-              $tabla = "segundo";
-              $curso = "23tt-sociales";
-              $ncurso = 22;
+              $tabla = "tercero";
+              $curso = "32tt-ingles";
+              $ncurso = 20;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
-              $copiaSaberes -> ctrCopiarSaberesSociales($tabla, $curso, $ncurso, $periodo);
+              $copiaSaberes -> ctrCopiarSaberesIngles($tabla, $curso, $ncurso, $periodo);
 
           ?>
 

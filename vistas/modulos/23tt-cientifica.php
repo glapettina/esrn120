@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=18 tabla="segundo" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=22 tabla="segundo" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="cientifica" periodo="'.$_SESSION['periodo'].'" idCurso=18 tabla="segundo" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="cientifica" periodo="'.$_SESSION['periodo'].'" idCurso=22 tabla="segundo" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 18;
+                  $valor = 22;
                   $tabla = "segundo";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
@@ -224,19 +224,8 @@
                 
                 <div class="input-group">
                   
-                  
-                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <select class="form-control input-lg" id="asistenciaCientifica" name="asistenciaCientifica">
-
-                  <option value="">Asistencia</option>
-                  <option value="0 %">0 %</option>
-                  <option value="25 %">25 %</option>
-                  <option value="50 %">50 %</option>
-                  <option value="75 %">75 %</option>
-                  <option value="100 %">100 %</option>
-                                        
-
-                  </select>
+                  <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                  <input class="form-control input-lg" type="number" name="asistenciaCientifica" id="asistenciaCientifica" placeholder="Ingresar asistencia (%)" required>
 
                 </div>
 
@@ -360,7 +349,7 @@
 
               $tabla = "segundo";
               $curso = "23tt-cientifica";
-              $ncurso = 18;
+              $ncurso = 22;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();

@@ -98,9 +98,11 @@
                   <li><a href="22tm-cientifica"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-cientifica"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-cientifica"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-cientifica"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-cientifica"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-cientifica"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-cientifica"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-cientifica"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-cientifica"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-cientifica"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-cientifica"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
@@ -139,9 +141,11 @@
                   <li><a href="22tm-sociales"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-sociales"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-sociales"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-sociales"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-sociales"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-sociales"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-sociales"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-sociales"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-sociales"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-sociales"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-sociales"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
@@ -183,9 +187,11 @@
                   <li><a href="22tm-literatura"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-literatura"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-literatura"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-literatura"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-literatura"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-literatura"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-literatura"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-literatura"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-literatura"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-literatura"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-literatura"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
@@ -225,9 +231,11 @@
                   <li><a href="22tm-matematica"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-matematica"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-matematica"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-matematica"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-matematica"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-matematica"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-matematica"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-matematica"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-matematica"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-matematica"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-matematica"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
@@ -266,9 +274,11 @@
                   <li><a href="22tm-ingles"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-ingles"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-ingles"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-ingles"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-ingles"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-ingles"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-ingles"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-ingles"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-ingles"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-ingles"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-ingles"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
@@ -308,9 +318,11 @@
                   <li><a href="22tm-edfisica"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-edfisica"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-edfisica"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-edfisica"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-edfisica"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-edfisica"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-edfisica"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-edfisica"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-edfisica"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-edfisica"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-edfisica"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
@@ -351,9 +363,11 @@
                   <li><a href="22tm-artistica"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-artistica"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-artistica"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-artistica"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-artistica"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-artistica"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-artistica"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-artistica"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-artistica"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-artistica"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-artistica"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
