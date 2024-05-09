@@ -408,15 +408,32 @@
               
               <div class="form-group">
                 
-                    <div class="input-group">
+                <div class="input-group">
                   
-                       <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-users"></i></span>
                   
-                       <select class="form-control input-lg" name="editarCurso" readonly required>
-                    
-                           <option id="editarCurso"></option>                    
-                    
-                       </select>
+                  <select class="form-control input-lg" id=editarCurso name="editarCurso">
+
+                    <option value="">Seleccionar curso</option>
+
+                    <?php
+
+                      $item = null;
+                      $valor = null;   
+
+                      $cursos = ControladorCursos::ctrMostrarCursos($item, $valor);
+
+                      foreach ($cursos as $key => $value) {
+
+                        echo '<option value="'.$value["id"].'">'.$value["nombre"].' - '.$value["turno"].'</option>';
+                        
+                      }
+
+                    ?>
+                                        
+
+
+                  </select>
 
                 </div>
 

@@ -36,8 +36,6 @@ $(".tablas").on("click", ".btnEditarAlumno", function(){
 				dataType: "json",
 				success: function(respuesta){
 
-					$("#editarCurso").val(respuesta["id"]);
-					$("#editarCurso").html(respuesta["nombre"]+ " - " +respuesta["turno"]);
 				}
 
 			})
@@ -49,11 +47,13 @@ $(".tablas").on("click", ".btnEditarAlumno", function(){
 					$("#editarNombre").val(respuesta["nombre"]);
 					$("#editarEmail").val(respuesta["email"]);
 					$("#editarModalidad").val(respuesta["modalidad"]);
+					$("#editarCurso").val(respuesta["id_curso"]);
 				}else{
 
 					$("#idAlumno").val(respuesta["id"]);
 					$("#editarDocumento").val(respuesta["documento"]);
 					$("#editarNombre").val(respuesta["nombre"]);
+					$("#editarCurso").val(respuesta["id_curso"]);
 					$("#editarEmail").val(respuesta["email"]);
 				}
 
