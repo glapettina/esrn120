@@ -157,7 +157,7 @@ class imprimirReporte{
 
 		if ($_GET["area"] == "natacion") {
 
-			$area = "C.O. - ESPACIO DE OPCIÓN INSTITUCIONAL: NATACIÓN";
+			$area = "C.O. - ESPACIO DE OPCIÓN INSTITUCIONAL";
 
 		}
 
@@ -508,7 +508,7 @@ foreach ($respuestaInforme as $key => $value) {
 
 		if ($_GET["area"] == "natacion") {
 
-			$area = "C.O. - ESPACIO DE OPCIÓN INSTITUCIONAL: NATACIÓN";
+			$area = "C.O. - ESPACIO DE OPCIÓN INSTITUCIONAL";
 
 			$saberes = $value["saberes_natacion"];
 			$aprecia = $value["aprecia_natacion"];
