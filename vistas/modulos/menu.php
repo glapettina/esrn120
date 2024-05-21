@@ -513,6 +513,7 @@
                   <li><a href="22tm-eve"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
                   <li><a href="21tt-eve"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
                   <li><a href="22tt-eve"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                  <li><a href="23tt-eve"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
                   <li><a href="31tm-eve"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-eve"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-eve"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
