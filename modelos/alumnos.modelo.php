@@ -91,22 +91,25 @@
 
 			if ($moda == 1) {
 			
-				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET documento = :documento, nombre = :nombre, email = :email, modalidad = :modalidad WHERE id = :id");
+				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET documento = :documento, nombre = :nombre, email = :email, modalidad = :modalidad, id_curso = :curso WHERE id = :id");
 
 				$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
 				$stmt->bindParam(":documento", $datos["documento"], PDO::PARAM_STR);
 				$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 				$stmt->bindParam(":email", $datos["email"], PDO::PARAM_STR);
 				$stmt->bindParam(":modalidad", $datos["modalidad"], PDO::PARAM_STR);
+				$stmt->bindParam(":curso", $datos["curso"], PDO::PARAM_STR);
+
 
 			}else{
 
 
-				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET documento = :documento, nombre = :nombre, email = :email WHERE id = :id");
+				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET documento = :documento, nombre = :nombre, id_curso = :curso, email = :email WHERE id = :id");
 
 				$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
 				$stmt->bindParam(":documento", $datos["documento"], PDO::PARAM_STR);
 				$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+				$stmt->bindParam(":curso", $datos["curso"], PDO::PARAM_STR);
 				$stmt->bindParam(":email", $datos["email"], PDO::PARAM_STR);
 
 			}

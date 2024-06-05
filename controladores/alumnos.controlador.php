@@ -108,11 +108,11 @@
 
 					if ($moda == 1) {
 						
-						$datos = array("documento" => $_POST["editarDocumento"], "nombre" => $_POST["editarNombre"], "email" => $_POST["editarEmail"], "modalidad" => $_POST["editarModalidad"], "id" => $_POST["idAlumno"]);
+						$datos = array("documento" => $_POST["editarDocumento"], "nombre" => $_POST["editarNombre"], "email" => $_POST["editarEmail"], "modalidad" => $_POST["editarModalidad"], "curso" => $_POST["editarCurso"], "id" => $_POST["idAlumno"]);
 
 					}else{
 
-						$datos = array("documento" => $_POST["editarDocumento"], "nombre" => $_POST["editarNombre"], "email" => $_POST["editarEmail"], "id" => $_POST["idAlumno"]);
+						$datos = array("documento" => $_POST["editarDocumento"], "nombre" => $_POST["editarNombre"], "curso" => $_POST["editarCurso"], "email" => $_POST["editarEmail"], "id" => $_POST["idAlumno"]);
 
 					}
 					
