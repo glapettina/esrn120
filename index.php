@@ -9,6 +9,7 @@
 	require_once "controladores/netbooks.controlador.php";
 	require_once "controladores/servicios.controlador.php";
 	require_once "controladores/informes.controlador.php";
+	require_once "controladores/periodos.controlador.php";
 
 	require_once "modelos/usuarios.modelo.php";
 	require_once "modelos/cursos.modelo.php";
@@ -18,6 +19,7 @@
 	require_once "modelos/netbooks.modelo.php";
 	require_once "modelos/servicios.modelo.php";
 	require_once "modelos/informes.modelo.php";
+	require_once "modelos/periodos.modelo.php";
 
 	$plantilla = new ControladorPlantilla();
 	$plantilla -> ctrPlantilla();

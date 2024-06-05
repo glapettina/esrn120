@@ -112,6 +112,7 @@
           $_GET["ruta"] == "cursos" ||
           $_GET["ruta"] == "ciudades" ||
           $_GET["ruta"] == "movilidad" ||
+          $_GET["ruta"] == "periodos" ||
           $_GET["ruta"] == "movilidad-fecha" ||
           $_GET["ruta"] == "resumen-movilidad" ||
           $_GET["ruta"] == "resumen-docente" ||
@@ -350,6 +351,7 @@
 <script src="vistas/js/netbooks.js"></script>
 <script src="vistas/js/servicios.js"></script>
 <script src="vistas/js/informes.js"></script>
+<script src="vistas/js/periodos.js"></script>
 
 
 <!--CAMPO FECHA - DATEPICKER-->
