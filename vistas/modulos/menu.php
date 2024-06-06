@@ -517,6 +517,7 @@
                   <li><a href="31tm-eve"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
                   <li><a href="32tm-eve"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
                   <li><a href="31tt-eve"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                  <li><a href="32tt-eve"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
                   <li><a href="41tm-eve"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
                   <li><a href="42tm-eve"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
                   <li><a href="41tt-eve"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>

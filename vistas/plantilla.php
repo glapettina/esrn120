@@ -299,6 +299,7 @@
           $_GET["ruta"] == "31tm-eve" ||    
           $_GET["ruta"] == "32tm-eve" ||    
           $_GET["ruta"] == "31tt-eve" ||    
+          $_GET["ruta"] == "32tt-eve" ||    
           $_GET["ruta"] == "41tm-eve" ||    
           $_GET["ruta"] == "42tm-eve" ||    
           $_GET["ruta"] == "41tt-eve" ||    
