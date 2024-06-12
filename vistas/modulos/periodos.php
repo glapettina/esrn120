@@ -218,6 +218,7 @@
                   
                   <span class="input-group-addon"><i class="fa fa-th"></i></span>
                   <input class="form-control input-lg" type="text" name="editarPeriodo" id="editarPeriodo" required>
+                  <input type="hidden" name="idPeriodo" id="idPeriodo">
                   
                 </div>
 

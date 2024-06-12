@@ -15,8 +15,9 @@
 
 			$item = "id_periodo";
 			$valor = $this->idPeriodo;
+			$ingreso = 0;
 
-			$respuesta = ControladorPeriodos::ctrMostrarPeriodos($item, $valor);
+			$respuesta = ControladorPeriodos::ctrMostrarPeriodos($item, $valor, $ingreso);
 
 			echo json_encode($respuesta);
 
